@@ -1,0 +1,68 @@
+.Home {
+    margin: 40px 0;
+    padding: 50px 0 20px 0;
+}
+
+.Home-content {
+    display: flex;
+    align-items: center;
+    padding: 50px 40px;
+    gap: 50px;
+    background: white;
+}
+
+.Home-text h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.Home-text h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #666;
+}
+
+.Home-text p {
+    font-size: 20px;
+    padding: 0 30px 10px 10px;
+    color: #666;
+}
+
+
+.Home-image img {
+  width: 100%;     
+  height: auto;     
+  display: block;   
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .Home-content {
+        flex-direction: column;
+        text-align: center;     
+    }
+
+    .Home-text h1 {
+        font-size: 24px; 
+    }
+
+    .Home-image {
+        order: -1;
+    }
+
+    .Home-text {
+        padding: 0;
+        gap: 100px;
+    }
+
+    .Home-text p {
+        padding: 0 10px; 
+    }
+}

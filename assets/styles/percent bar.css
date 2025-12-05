@@ -1,0 +1,63 @@
+.skills {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;        
+  overflow-x: auto;         
+  padding-bottom: 10px;     
+  scrollbar-width: none;  
+}
+
+.skills::-webkit-scrollbar {
+  display: none;          
+}
+.skill {
+  flex: 0 0 auto;  
+  text-align: center;
+  
+}
+
+.circle {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+
+  background: conic-gradient(
+    var(--color) calc(var(--percentage) * 3.6deg),
+    white 0deg
+  );
+
+  position: relative;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) - 15px);
+  height: calc(var(--size) - 15px);
+  background: white;
+  border-radius: 50%;
+}
+
+.circle img {
+  position: relative;
+  width: 75%;
+  height: auto;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .circle {
+    --size: 70px;           /* smaller circles on mobile */
+  }
+
+  .skill p {
+    font-size: 0.8rem;      /* smaller text below icons */
+  }
+}

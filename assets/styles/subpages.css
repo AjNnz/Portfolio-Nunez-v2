@@ -1,0 +1,309 @@
+
+:root { --header-height: 78px; } /* adjust to your header height */
+
+body.subpage {
+  padding-top: var(--header-height); /* only on this page */
+  box-sizing: border-box;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.subpage #footer {
+  margin-top: 50px;
+}
+
+/* Title card — scoped to this page */
+.subpage .Title {
+  max-width: 1100px;
+  margin: 18px auto;
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+
+ .Title h1 {
+  margin-top: 50px;
+  font-size: clamp(20px, 3.6vw, 30px);
+  line-height: 1.06;
+  font-weight: 800;
+  word-break: break-word;
+  hyphens: auto;
+text-align: center;
+}
+
+.subpage .content1 {
+  max-width: 1100px;
+  margin: 14px auto;
+  border-radius: 10px;
+  padding: 18px 15px;
+  padding-bottom: 50px;
+}
+
+.subpage .content1 p {
+  margin: 0;
+  font-size: clamp(16px, 1.9vw, 20px);
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* responsive tweak */
+@media (max-width: 900px) {
+  :root { --header-height: 72px; }
+  .subpage .Title, .subpage .content1 {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+  }
+  .subpage .Title h1 { font-size: clamp(18px, 5vw, 24px); }
+
+  .subpage .content1 p{ 
+    padding: 10px 10px; }
+
+}
+
+
+
+.buttons {
+      display: flex;       /* enables flex layout */
+  flex-direction: row; /* default, can be omitted */
+  gap: 10px;           /* optional: space between items */
+
+}
+
+.subpage .content1 .button:hover {
+    background-color: #e5f1fe;
+}
+
+.subpage .content1 .button2:hover {
+    background-color: #e5f1fe;
+}
+
+/* responsive: stack on very small screens only */
+@media (max-width: 420px) {
+  .subpage .content2 .buttons {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 360px;
+    padding-top: 6px;
+  }
+  .subpage .content2 .button {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+}
+
+
+
+/* Buttons row: keep both buttons on one row, centered, normal size */
+.subpage .content1 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin: 8px auto 0;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow wrapping on narrow viewports to avoid overflow */
+}
+
+/* base (mobile / small) button size */
+.subpage .content1 .button {
+  flex: 0 0 auto;
+  min-width: 140px;
+  max-width: 260px;
+  height: 72px;
+  padding: 10px 20px;
+  background: #dceeff;
+  color: #062126;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(2,18,30,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.subpage .content1 .button2 {
+  flex: 0 0 auto;
+  min-width: 140px;
+  max-width: 260px;
+  height: 72px;
+  padding: 10px 20px;
+  background: #dceeff;
+  color: #062126;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(2,18,30,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+/* DESKTOP: force the exact size you want (500px x 100px) */
+@media (min-width: 1024px) {
+  .subpage .content1 .button {
+    width: 500px;
+    height: 100px;
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: none;
+    font-size: 18px;
+  }
+  .subpage .content1 .buttons {
+    flex-wrap: nowrap; /* keep both in one row on wide screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .subpage .content1 .button2 {
+    width: 310px;
+    height: 100px;
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: none;
+    font-size: 18px;
+  }
+  .subpage .content1 .buttons {
+    flex-wrap: nowrap; /* keep both in one row on wide screens */
+  }
+}
+
+/* TABLET: reduce fixed size / allow wrapping to avoid overflow (e.g. iPad mini) */
+@media (max-width: 1023px) and (min-width: 551px) {
+  .subpage .content1 .button {
+    min-width: 200px;
+    max-width: 420px;
+    height: 90px;
+  }
+  .subpage .content1 .buttons {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 551px) {
+  .subpage .content1 .button2 {
+    min-width: 100px;
+    max-width: 230px;
+    height: 90px;
+  }
+  .subpage .content1 .buttons {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* SMALL PHONES: stack */
+@media (max-width: 550px) {
+  .subpage .content1 .buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 360px;
+    margin: 8px auto 0;
+  }
+  .subpage .content1 .button {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: 64px;
+  }
+}
+
+/* remove the invalid media rule if present (it used no unit): 
+   @media (max-width: 850) { ... }  -> replace with (max-width: 850px) or delete it */
+/* filepath: c:\Users\Angel Rose Nunez\OneDrive\Documents\Angelito's works\CODES WORKS\Portfolio-Nunez\assets\styles\subpages.css */
+/* ...existing code... */
+
+/* buttons container: centered, allow wrap when space is limited */
+.subpage .content1 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin: 8px auto 0;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow wrapping on narrow viewports to avoid overflow */
+}
+
+/* base (mobile / small) button size */
+.subpage .content1 .button {
+  flex: 0 0 auto;
+  min-width: 140px;
+  max-width: 260px;
+  height: 72px;
+  padding: 10px 20px;
+  background: #dceeff;
+  color: #062126;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(2,18,30,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+/* DESKTOP: force the exact size you want (500px x 100px) */
+@media (min-width: 1024px) {
+  .subpage .content1 .button {
+    width: 500px;
+    height: 100px;
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: none;
+    font-size: 18px;
+  }
+  .subpage .content1 .buttons {
+    flex-wrap: nowrap; /* keep both in one row on wide screens */
+  }
+}
+
+/* TABLET: reduce fixed size / allow wrapping to avoid overflow (e.g. iPad mini) */
+@media (max-width: 1023px) and (min-width: 820px) {
+  .subpage .content1 .button {
+    min-width: 350px;
+    max-width: 420px;
+    height: 90px;
+  }
+  .subpage .content1 .buttons {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 819px) and (min-width: 551px) {
+  .subpage .content1 .button {
+    min-width: 250px;
+    max-width: 350px;
+    height: 90px;
+  }
+  .subpage .content1 .buttons {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* SMALL PHONES: stack */
+@media (max-width: 550px) {
+  .subpage .content1 .buttons {
+    flex-direction: column;
+    gap: 12px;
+    min-width: 190px;
+    max-width: 250px;
+    margin: 8px auto 0;
+  }
+  .subpage .content1 .button {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: 64px;
+  }
+}

@@ -1,0 +1,28 @@
+@import "heading-footer.css";
+@import "home.css";
+@import "button.css";
+@import "percent bar.css";
+@import "About.css";
+@import "project.css";
+@import "contact.css";
+@import "subpages.css";
+
+* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+  
+p {
+  margin: 10px;
+  color: #666;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 20px;
+}
